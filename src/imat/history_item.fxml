@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="196.0" styleClass="background" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <ImageView fx:id="historyItemImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="35.0">
+               <image>
+                  <Image url="@resources/apple.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="historyItemName" fill="WHITE" layoutX="67.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-big" text="Äpple" AnchorPane.topAnchor="5.0" />
+            <Text fx:id="historyItemPrice" fill="WHITE" layoutX="78.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-larger" text="50kr" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="78.0" />
+            <Text fx:id="ammountShoppingcartItem1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-big" text="3" />
+            <Text fx:id="historyItemAmmount" fill="WHITE" layoutX="87.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-big" text="2" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="132.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
