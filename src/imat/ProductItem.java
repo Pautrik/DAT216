@@ -15,7 +15,7 @@ public class ProductItem extends AnchorPane {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_item.fxml"));
 
-
+        // Comment
 
         try {
             fxmlLoader.load();

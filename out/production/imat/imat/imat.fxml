@@ -2,43 +2,25 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainController">
    <children>
       <StackPane prefHeight="494.0" prefWidth="866.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@style.css" />
-            <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@style.css">
-               <children>
-                  <Button fx:id="earlierRecieptsButton" layoutX="388.0" layoutY="252.0" mnemonicParsing="false" text="Tidigare Köp">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="toShopButton" layoutX="395.0" layoutY="187.0" mnemonicParsing="false" onAction="#toShopAction" text="Till Affären">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
             <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@style.css" />
             <AnchorPane fx:id="shopPane" prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@style.css">
                <children>
-                  <FlowPane fx:id="testFlowPane" layoutX="222.0" layoutY="70.0" prefHeight="370.0" prefWidth="423.0">
-                     <children>
-                        <ImageView fx:id="testImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </FlowPane>
-                  <Accordion layoutY="48.0" prefHeight="552.0" prefWidth="202.0" stylesheets="@style.css">
+                  <FlowPane fx:id="testFlowPane" layoutX="222.0" layoutY="70.0" prefHeight="370.0" prefWidth="423.0" />
+                  <Accordion layoutY="365.0" prefHeight="235.0" prefWidth="202.0" stylesheets="@style.css">
                     <panes>
                       <TitledPane animated="false" prefHeight="506.0" prefWidth="202.0" styleClass="background" text="untitled 1">
                         <content>
@@ -57,34 +39,37 @@
                       </TitledPane>
                     </panes>
                   </Accordion>
-                  <AnchorPane id="buttonBar" layoutX="1.0" prefHeight="48.0" prefWidth="900.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="background" stylesheets="@style.css">
+               <children>
+                  <Button fx:id="earlierRecieptsButton" layoutX="388.0" layoutY="338.0" mnemonicParsing="false" text="Tidigare Köp">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="toShopButton" layoutX="395.0" layoutY="273.0" mnemonicParsing="false" onAction="#toShopAction" text="Till Affären">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </children>
       </StackPane>
-      <ButtonBar id="buttonBar" prefHeight="40.0" prefWidth="900.0" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <buttons>
-          <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" text="Till Affären">
+      <AnchorPane id="buttonBar" prefHeight="60.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="200.0" layoutX="20.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/test1.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="270.0" layoutY="6.0" prefHeight="48.0" prefWidth="272.0">
                <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <TextField alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="290.0" promptText="Sök">
-               <font>
-                  <Font size="15.0" />
+                  <Font size="22.0" />
                </font>
             </TextField>
-            <Button mnemonicParsing="false" text="Tidigare Köp">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" text="Visa Varukorg">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-         </buttons>
-      </ButtonBar>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

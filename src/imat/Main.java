@@ -17,7 +17,7 @@ public class Main extends Application {
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("imat/resources/IMat");
 
         Parent root = FXMLLoader.load(getClass().getResource("imat.fxml"));
-        Scene scene = new Scene(root, 900, 600);
+        Scene scene = new Scene(root, 1280, 720);
 
         stage.getIcons().add(new Image("imat/icon.png"));
         stage.setScene(scene);
