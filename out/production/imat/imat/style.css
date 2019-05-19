@@ -1,0 +1,87 @@
+@font-face
+{
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf');
+}
+
+.navbar-item {
+    -fx-background-color: #C92D3C;
+}
+
+.navbar-item:hover {
+    -fx-background-color: #A90D1C;
+}
+
+.confirm-item {
+    -fx-background-color: #008441;
+}
+
+.confirm-item:hover {
+    -fx-background-color: #006421;
+}
+
+
+.background {
+    -fx-background-color: #2F4858;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.historycart {
+    -fx-background-color: #2F4858;
+}
+
+.historycart:hover {
+    -fx-background-color: #1F3848;
+}
+
+.remove-border{
+    -fx-padding: 0;
+}
+
+.inprogress {
+    -fx-fill: #00B3FF;
+}
+
+.doneprogress{
+    -fx-fill: #00C481;
+}
+
+.notstartedprogress {
+    -fx-fill: #404040;
+}
+
+.progressbar {
+    border-radius: 25px;
+  }
+
+.text-smaller {
+    -fx-font-size: 12px;
+    -fx-font-family: "Roboto";
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.text-normal {
+    -fx-font-size: 14px;
+    -fx-font-family: "Roboto";
+    -fx-text-fill: #FFFFFF
+}
+
+.text-larger {
+    -fx-font-size: 20px;
+    -fx-font-family: "Roboto";
+    -fx-text-fill: #FFFFFF;
+}
+
+.text-big {
+    -fx-font-size: 24px;
+    -fx-font-family: "Roboto";
+    -fx-text-fill: #FFFFFF;
+}
