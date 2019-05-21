@@ -19,7 +19,7 @@
    <children>
       <AnchorPane id="buttonBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1280.0" stylesheets="@style.css" AnchorPane.bottomAnchor="660.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane fx:id="toStore1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" styleClass="navbar-item" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="toStore1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showShopPane" prefHeight="60.0" prefWidth="200.0" styleClass="navbar-item" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -43,7 +43,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="toHistory1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="360.0" styleClass="navbar-item" AnchorPane.leftAnchor="560.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="toHistory1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="360.0" onMouseClicked="#showHistoryPane" styleClass="navbar-item" AnchorPane.leftAnchor="560.0" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="85.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
                   <Text fill="WHITE" layoutX="148.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-larger" text="Tidigare Köp" />
                </children>
             </Pane>
-            <Pane fx:id="toUser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="360.0" styleClass="navbar-item" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="toUser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="360.0" onMouseClicked="#showUserPane" styleClass="navbar-item" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="85.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
