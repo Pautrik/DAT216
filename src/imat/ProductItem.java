@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
@@ -26,12 +27,13 @@ public class ProductItem extends AnchorPane {
 
     private MainController parentController;
     private IMatDataHandler iMatDataHandler;
+    private ShoppingItem shoppingItem;
 
     public ProductItem(MainController controller, Product product) {
 
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_item.fxml"));
-
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -47,7 +49,8 @@ public class ProductItem extends AnchorPane {
 
         boolean isFavorite = parentController.getIMatDataHandler().isFavorite(product);
         String starImagePath = isFavorite ? "resources/favorite.png" : "resources/notfavorite.png";
-        productFavorite.imageProperty().set(new Image(starImagePath));
+        Image starImage = new Image(getClass().getResource(starImagePath).toString(), true);
+        productFavorite.imageProperty().set(starImage);
 
         String priceAndUnit = Double.toString(product.getPrice()) + product.getUnit();
         productPrice.textProperty().set(priceAndUnit);
@@ -56,10 +59,26 @@ public class ProductItem extends AnchorPane {
         List<ShoppingItem> items = iMatDataHandler.getShoppingCart().getItems();
         for(ShoppingItem item : items) {
             if(item.getProduct() == product) {
-                amount = item.getAmount();
+                shoppingItem = item;
+                amount = shoppingItem.getAmount();
                 break;
             }
         }
         productAmount.textProperty().set(Double.toString(amount));
+    }
+
+    protected void addOneItem(Event event) {
+        if(shoppingItem == null) {
+            return;
+        }
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1); // TODO update visual either manually or through observer
+    }
+
+    protected void removeOneItem() {
+        if(shoppingItem == null || shoppingItem.getAmount() < 1) {
+            return;
+        }
+
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
     }
 }
