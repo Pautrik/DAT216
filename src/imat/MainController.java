@@ -30,6 +30,7 @@ public class MainController implements Initializable {
     @FXML private StackPane historyPane;
     @FXML private AnchorPane startPane;
     @FXML private FlowPane testFlowPane;
+    @FXML private FlowPane productList;
 
     @FXML private TextField firstnameEdit;
     @FXML private TextField lastnameEdit;
@@ -52,12 +53,16 @@ public class MainController implements Initializable {
     @FXML
     private void showShopPane() {
         shopPane.toFront();
+
+        productList.getChildren().clear();
+        List<Product> products = iMatDataHandler.getProducts();
+        for(Product p : products) {
+            productList.getChildren().add(new ProductItem(this, p));
+        }
     }
 
     @FXML
-    private void showUserPane() {
-        userPane.toFront();
-    }
+    private void showUserPane() { userPane.toFront(); }
 
     @FXML
     private void showPaymentPane() { paymentPane.toFront(); }
